@@ -50,3 +50,9 @@ untuk melihat daftar branch dapat menggunakan :
 ```
 git branch
 ```
+
+## 6. Merge
+Sebelumnya kita sudah bisa melakukan percabangan agar memudahkan pengembangan fitur baru, kemudian jika fitur tersebut sudah berhasil dibuat kita bisa melakukan _merge_ atau menggabungkan _source code_ tambahan tersebut ke branch lainnya, atau branch utama. untuk melakukan itu kita perlu berpindah ke branch yang ingin digabungkan, contoh jika fitur baru tersebut berada di branch B maka kita perlu ke branch A atau lainnya kemudian melakukan merge, dengan perintah berikut:
+```
+git merge nama_branch
+```
