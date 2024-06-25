@@ -8,7 +8,7 @@ namespace CRUD.ADO.NET.Controllers
 	[Route("[controller]")]
 	public class CategoriesController : ControllerBase
 	{
-		private static string connectionString = "Server=147.139.191.88,1444; Database=Northwind; User ID=sa; Password=Nimda321; Connect Timeout=0;";
+		private static string connectionString = "koneksi_database";
 
 		[HttpPost("Insert")]
 		public IActionResult Insert([FromBody] Categories categories)
@@ -50,7 +50,7 @@ namespace CRUD.ADO.NET.Controllers
 
 				return Ok();
 			}
-			catch(Exception ex)
+			catch (Exception ex)
 			{
 				return BadRequest(ex.Message);
 			}
@@ -73,7 +73,7 @@ namespace CRUD.ADO.NET.Controllers
 					{
 						using (SqlDataReader reader = command.ExecuteReader())
 						{
-							while (reader.Read()) 
+							while (reader.Read())
 							{
 								Categories category = new Categories();
 								category.CategoryID = reader.GetInt32(0);
@@ -121,7 +121,7 @@ namespace CRUD.ADO.NET.Controllers
 
 				}
 			}
-			catch(Exception ex)
+			catch (Exception ex)
 			{
 				return BadRequest(ex.Message);
 			}
@@ -150,7 +150,7 @@ namespace CRUD.ADO.NET.Controllers
 					return Ok();
 				}
 			}
-			catch(Exception ex) 
+			catch (Exception ex)
 			{
 				return BadRequest(ex.Message);
 			}
