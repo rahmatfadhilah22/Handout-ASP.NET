@@ -56,3 +56,32 @@ Sebelumnya kita sudah bisa melakukan percabangan agar memudahkan pengembangan fi
 ```
 git merge nama_branch
 ```
+
+## 7. Remote Repository
+
+Penjelasan 1 - 6 merupakan penggunaan git pada level _local_ sekarang kita ingin menggunakan git untuk keperluan bekerja sama antar developer yang pasti mereka memiliki _repository local_ masing-masing, untuk itu kita perlu menggunakan _remote repository_ untuk berinteraksi. Kita dapat menggunakan Github, Gitlab, Bit Bucket atau yang lain sebagai _remote repository_. topik yang penting kita ketahui adalah remote, push, dan pull yang akan kita bahas selanjutnya.
+
+## 8. Remote
+
+Setelah membuat Repository pada github kita dapat mengambil URL/SSH nya agar git _repository local_ kita dapat terhubung dengan yang ada di _remote repository_. Untuk melakukan hal tersebut kita dapat menggunakan perintah :
+```
+git remote add nama_remote url_remote
+git remote add origin https://github.com/rahmatfadhilah22/Handout-ASP.NET.git
+```
+sekarang jika kita ingin berinteraksi pada remote repository kita cukup menggunakan nama remote tersebut(orgin).
+
+## 9. Push
+Push merupakan proses dimana kita ingin mengirim source code terbaru yang berada pada _local repository_ ke _remote repository_. Untuk melakukan proses tersebut kita dapat menggunakan perintah berikut :
+```
+git push origin nama_branch_remote_server
+git push origin master
+```
+dimana origin tersebut adalah alamat _remote repository_.
+
+## 10. Fetch dan Pull
+Selain mengirim _source code_ terbaru, kita juga dapat mengetahui perubahan _source code_ terbaru pada _remote repository_. Untuk mengetahui perubahan kita dapat menggunakan fetch, sedangkan jika kita ingin mengetahui sekaligus merge code yang ada di repository local dan remote repository kita dapat menggunakan pull. kita dapat melakukan kedua proses tersebut dengan perintah berikut:
+
+```
+git fetch origin nama_branch_remote_server
+git pull origin nama_branch_remote_server
+```
