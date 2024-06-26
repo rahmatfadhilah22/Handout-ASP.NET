@@ -92,4 +92,3 @@ Biasanya terdapat folder atau file tertentu yang tidak ingin kita push ke _repos
 dotnet new gitignore
 ```
 
-## 12. Tes 
