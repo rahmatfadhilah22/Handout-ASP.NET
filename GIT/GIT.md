@@ -85,3 +85,9 @@ Selain mengirim _source code_ terbaru, kita juga dapat mengetahui perubahan _sou
 git fetch origin nama_branch_remote_server
 git pull origin nama_branch_remote_server
 ```
+
+## 11. Ignore
+Biasanya terdapat folder atau file tertentu yang tidak ingin kita push ke _repository remote_, misalnya folder bin atau obj yang merupakan hasil build. Untuk melakukan hal tersebut kita bisa membuat file dengan extensi .gitignore, kemudian didalamnya kita masukkan nama atau pola file/foldeder yang tidak ingin kita push ke _remote repository_. Jika kita menggunakan dotnet kita dapat menggunakan perintah berikut agar secara otomatis dibuatkan file .gitignore dan file/folder yang tidak perlu di push :
+```
+dotnet new gitignore
+```
