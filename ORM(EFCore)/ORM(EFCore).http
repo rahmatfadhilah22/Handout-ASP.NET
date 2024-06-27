@@ -1,0 +1,6 @@
+@ORM_EFCore__HostAddress = http://localhost:5017
+
+GET {{ORM_EFCore__HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
