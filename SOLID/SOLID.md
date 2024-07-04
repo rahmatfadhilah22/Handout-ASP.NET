@@ -4,13 +4,13 @@
 
 SOLID merupakan akronim dari prinsip-prinsip dalam pemrograman beroreientasi objek. Prinsip ini mengatur kita agar code yang dibuat memiliki kualitas yang baik, mudah di _maintenence_, _testing_, fleksibel dll.
 
-## (S)ingle Responsibility (SRP)
+## 2. (S)ingle Responsibility (SRP)
 
 Prinsip ini menegaskan bahwa suatu class berikut _member of class_ nya hanya memiliki tanggung jawab tunggal. sebagai contoh kita punya proses transaksi yang melibatkan proses _select_, insert, dan update maka kita tidak boleh membuat satu _method_ yang secara langsung menangani tiga hal tersebut, tapi kita perlu membuat tiga buah method yang memiliki tugas secara spesifik kemudian satu method lagi yang mengkoordinir method2 tersebut.
 
 Hal ini diperlukan, karena jika terjadi kesalahan pada proses update, maka kita dapat fokus pada _method_ update saja yg di _maintenence_, sekaligus tidak merubah code-code pada _method_ lainnya.
 
-## (O)pen/Closed Principle (OCP)
+## 3. (O)pen/Closed Principle (OCP)
 
 Prinsip ini menyatakan suatu class harus terbuka untuk ekstensi tetapi tertutup pada modifikasi. Maksud dari pernyataan tersebut adalah jika dimasa depan kita melakukan penambahan fitur maka seharusnya itu dapat dilakukan tanpa memodifikasi source code sebelumnya.
 
@@ -74,7 +74,7 @@ public class Penguin : Burung
 
 ```
 
-## (I)nterface Segregation Principle (ISP)
+## 4. (I)nterface Segregation Principle (ISP)
 
 Prinsip ini menyatakan bahwa klien tidak boleh dipaksa untuk bergantung pada antarmuka yang mereka tidak gunakan. Maksud dari pernyataan tersebut adalah suatu class tidak boleh dipaksa membuat properti atau method yang mana hal tersebut tidak diperlukan pada class tersebut. sebagai contoh kita memiliki interface yang didalamnya ada method GetRecords, GetRecord, Insert, Update, dan Delete. Ketika kita membuat suatu class kemudian implement pada interface tersebut maka class kita akan dipaksa membuat method-method tersebut karena sifat dari interface adalah kontrak yang berarti class yg implement harus membuat apa yang ada didalam interface yang diimplementnya.
 
